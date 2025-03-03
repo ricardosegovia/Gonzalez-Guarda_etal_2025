@@ -1,3 +1,6 @@
+
+
+## Load Packages
 library(reticulate)
 library(tidyverse)
 library(IUCNN)
@@ -8,7 +11,7 @@ install.packages("devtools")
 library(devtools)
 install_github("IUCNN/IUCNN")
 
-total_spp <- read.csv("total_sppXcoord.csv")
+total_spp <- read.csv("total_sppXcoord.csv") ## from NeoTropTree (required in http://www.neotroptree.info)
 head(total_spp)
 unique(total_spp$spp)
 temp_spp_cat2 <- read.csv("iucn_list_total.csv")
@@ -55,12 +58,10 @@ prediction_occ <- prediction_occ[c(1, 3, 2)]
 colnames(prediction_occ) <- c("species", "decimallongitude", "decimallatitude")
 unique(prediction_occ$species)
 head(prediction_occ)
+
 # 1. Feature and label preparation
 head(training_occ)
 unique(training_occ$species)
-
-
-
 features <- iucnn_prepare_features(training_occ) # Training features
 str(features)
 features_predict <- iucnn_prepare_features(prediction_occ) # Prediction features
@@ -68,6 +69,7 @@ str(features_predict)
 labels_train <- iucnn_prepare_labels(x = training_labels,
                                      y = features) # Training labels
 str(labels_train)
+
 # Model testing
 # For illustration models differing in dropout rate and number of layers
 

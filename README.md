@@ -28,6 +28,7 @@ Most megaherbivores in the Americas went extinct around 10,000 years ago, presum
 * **`Data/`**: Contains the raw and processed datasets used in the analysis.
     * `frugivory_data.csv`: Data related to frugivory interactions.
     * `extinction_risk_data.csv`: Data on plant extinction risk.
+    * `speciesXcountry.csv`: Data on species list by Botnaical Country
     
 * **`Code/`**: Contains the scripts used for data processing, analysis, and modeling.
     * `extraction_extinction_risk_data.R`: R script for extracting IUCN extnction risk labesl.
@@ -40,4 +41,3 @@ Most megaherbivores in the Americas went extinct around 10,000 years ago, presum
 * Erwin González-Guarda: erwin.gonzalez@uoh.cl
 * Claudio Latorre: clatorreh@uc.cl
 * Ricardo Segovia: rsegovia@ieb-chile.cl
-[text](Code/viz_and_signific_analises.R)

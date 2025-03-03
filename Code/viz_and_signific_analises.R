@@ -14,9 +14,8 @@ dataset_temp <- merge(fruit_type, model_risk, by = "species")
 dim(dataset_temp)
 head(dataset_temp)
 
-# removing California because all risky plants are protected
-dataset <- dataset_temp[!(dataset_temp$LEVEL3_NAM == "California"),]
 table(dataset$labels)
+
 # grouping megafauna and labels
 dataset$labels2 <- dataset$labels
 dataset$labels2 <- gsub("NT","LC",dataset$labels2)
@@ -31,24 +30,8 @@ dataset$Megafauna2 <- gsub("3","1",dataset$Megafauna2)
 dataset$Megafauna2 <- gsub("4","1",dataset$Megafauna2)
 table(dataset$Megafauna2)
 write.csv(dataset, "spp_table.csv")
+
 # Plot
-
-# plot1 <- ggplot(dataset, aes(fill=labels2, x = Megafauna2)) +
-#   facet_wrap(~ LEVEL3_NAM, ncol = 4) +
-#   geom_bar(position = "fill") +
-#   geom_text(aes(label = unlist(tapply(..count.., list(..x.., ..PANEL..), 
-#                                function(a) paste(round(100*a/sum(a), 0), '%'))),
-#      y = ..count.. ), stat = "count",
-#      position = position_fill(vjust = .5)) +
-#      scale_color_npg() +
-#      scale_fill_npg() +
-#      xlab("Megafaunal fruit (0=FALSE, 1=TRUE)") +
-#      ylab("Percentage") +
-#      scale_fill_discrete(name="Extinction risk",
-#                          labels=c("Low Concern", "Under Risk"))
-
-# plot1
-############3
 
 plot1 <- ggplot(dataset, aes(fill = labels2, x = Megafauna2)) +
   facet_wrap(~ LEVEL3_NAM, ncol = 4) +
@@ -71,20 +54,6 @@ plot1
 #############3
 
 
-ggsave(
-  "plot1_2025.png",
-  plot = plot1,
-  device = "png",
-  path = NULL,
-  scale = 1,
-  width = NA,
-  height = NA,
-  units = "px",
-  dpi = 300,
-  limitsize = TRUE,
-  bg = NULL,
-  )
-
 # Significance analises
 
 head(dataset_temp)
@@ -100,10 +69,6 @@ dataset_2$bars <- paste(dataset_2$LEVEL3_NAM, dataset_2$Megafauna2, sep="_")
 head(dataset_2)
 
 
-count <- xtabs(~ bars + labels, data = dataset_2)
-count_percent <- round((count / rowSums(count)) * 100, 2)
-
-# copying from cunonicaceae paper
 
 set.seed(1234)
 dataset_rep<-dataset_2
@@ -157,11 +122,6 @@ head(zz4)
 
 write.csv(zz4, "table_freq2.csv")
 
-##creating table pendient
-
-
-
-
 
 
 ## significance analysis for UR and LC
@@ -177,10 +137,6 @@ table(dataset_2$Megafauna2)
 dataset_2$bars <- paste(dataset_2$LEVEL3_NAM, dataset_2$Megafauna2, sep="_")
 head(dataset_2)
 
-
-
-
-# copying from cunonicaceae paper
 
 set.seed(1234)
 dataset_rep<-dataset_2
