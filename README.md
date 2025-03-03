@@ -25,101 +25,19 @@ Most megaherbivores in the Americas went extinct around 10,000 years ago, presum
 
 ## Repository Contents
 
-* **`datasets/`**: Contains the raw and processed datasets used in the analysis.
+* **`Data/`**: Contains the raw and processed datasets used in the analysis.
     * `frugivory_data.csv`: Data related to frugivory interactions.
-    * `plant_data.csv`: Data on plant species characteristics.
-    * `environmental_data.csv`: Environmental variables used in the model.
     * `extinction_risk_data.csv`: Data on plant extinction risk.
-    * (Add other relevant dataset descriptions here)
-* **`code/`**: Contains the scripts used for data processing, analysis, and modeling.
-    * `data_preprocessing.R`: R script for cleaning and preparing the datasets.
-    * `machine_learning_model.py`: Python script implementing the machine learning model.
-    * `statistical_analysis.R`: R script for statistical analyses.
-    * `visualization.R`: R script for generating figures and plots.
-    * (Add other relevant code descriptions here)
-* **`results/`**: Contains the output of the analyses, including figures, tables, and model outputs.
-    * `model_output.csv`: Results from the machine learning model.
-    * `figures/`: Directory containing generated figures.
-    * `tables/`: Directory containing generated tables.
+    
+* **`Code/`**: Contains the scripts used for data processing, analysis, and modeling.
+    * `extraction_extinction_risk_data.R`: R script for extracting IUCN extnction risk labesl.
+    * `iucnn_models.R`: R script implementing the machine learning IUCNN model.
+    * `viz_and_signific_analises.R`: R script for generating figures and statistical analyses.
 * **`README.md`**: This file, providing an overview of the repository.
-* **`requirements.txt`**: List of Python dependencies.
-* **`R_packages.txt`**: List of R packages used.
-
-## Getting Started
-
-### Prerequisites
-
-* Python (>= 3.6)
-* R (>= 4.0)
-* Required Python packages (see `requirements.txt`)
-* Required R packages (see `R_packages.txt`)
-
-### Installation
-
-1.  Clone the repository:
-
-    ```bash
-    git clone [repository URL]
-    cd [repository directory]
-    ```
-
-2.  Create a virtual environment (recommended for Python):
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
-    ```
-
-3.  Install Python dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4.  Install R packages:
-    Open R and run:
-    ```R
-    install.packages(c("package1", "package2", "package3")) #replace with packages from R_packages.txt
-    ```
-
-### Usage
-
-1.  Run the data preprocessing scripts:
-
-    ```bash
-    Rscript code/data_preprocessing.R
-    ```
-
-2.  Run the machine learning model:
-
-    ```bash
-    python code/machine_learning_model.py
-    ```
-
-3.  Run the statistical analysis scripts:
-
-    ```bash
-    Rscript code/statistical_analysis.R
-    ```
-
-4.  Run the visualization scripts:
-
-    ```bash
-    Rscript code/visualization.R
-    ```
-
-5. Review the results in the `results/` directory.
-
-## License
-
-[Specify the license, e.g., MIT License]
 
 ## Contact
 
-* Erwin González-Guarda: [email address]
-* Claudio Latorre: [email address]
-
-## Acknowledgments
-
-[Add any acknowledgments here]
+* Erwin González-Guarda: erwin.gonzalez@uoh.cl
+* Claudio Latorre: clatorreh@uc.cl
+* Ricardo Segovia: rsegovia@ieb-chile.cl
+[text](Code/viz_and_signific_analises.R)
