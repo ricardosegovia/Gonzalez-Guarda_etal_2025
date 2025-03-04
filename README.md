@@ -26,6 +26,15 @@ Most megaherbivores in the Americas went extinct around 10,000 years ago, presum
 ## Repository Contents
 
 * **`Data/`**: Contains the raw and processed datasets used in the analysis.
+    * `Supplementary_Data.xlsx`: Data on paleontological evidence
+        * sheet 1: Data related to stable isotope values in gomphotheres from central Chile
+        * sheet 2: Data related to stable isotope values in Notiomastodon platensis from South America
+        * sheet 3: Data related to stable isotope values in Cuvieronius hyodon from South America
+        * sheet 4: Data related to the p-values of statistical analysis in gomphotheres from South America
+        * sheet 5: Data related to dental microwear values
+        * sheet 6 : Data related to the classification of types of fruit from trees with fleshy fruits
+        * sheet 7: Data related to stable isotope values of modern plants
+        * sheet 8: Data related to stable isotope values of the modern deer species Pudu puda
     * `frugivory_data.csv`: Data related to frugivory interactions.
     * `extinction_risk_data.csv`: Data on plant extinction risk.
     * `speciesXcountry.csv`: Data on species list by Botnaical Country
