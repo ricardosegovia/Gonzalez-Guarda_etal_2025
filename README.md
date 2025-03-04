@@ -1,8 +1,8 @@
-# Lasting impact of proboscidean frugivory on South American ecosystems
+# Fossil evidence of proboscidean frugivory and its lasting impact on South American ecosystems
 
 This repository contains the datasets and code used in the research paper:
 
-**Lasting impact of proboscidean frugivory on South American ecosystems**
+**Fossil evidence of proboscidean frugivory and its lasting impact on South American ecosystems**
 
 By: Erwin González-Guarda<sup>1,2*</sup>, Andrea P. Loayza<sup>3</sup>, Ricardo A. Segovia<sup>3,4</sup>, Florent Rivals<sup>2,5,6</sup>, Alia Petermann-Pichincura<sup>5</sup>, Iván Ramírez-Pedraza<sup>2,5,7</sup>, Lidiane Asevedo<sup>8</sup>, Carlos Tornero<sup>2,9</sup>, Rafael Labarca<sup>10</sup>, Claudio Latorre<sup>3,11,12*</sup>
 
